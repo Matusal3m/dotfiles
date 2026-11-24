@@ -1,7 +1,8 @@
 # PATHS
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+export ZSH="$HOME/.local/oh-my-zsh"
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # EDITOR
 export EDITOR=nvim
@@ -24,12 +25,3 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# pnpm
-export PNPM_HOME="/home/matusalem/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
